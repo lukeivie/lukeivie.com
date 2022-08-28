@@ -1,4 +1,4 @@
-# Luke Ivie
+# 🌃 Luke Ivie
 
 I am a passionate Full-Stack Engineer with a background in UI/UX. My primary experience is in front-end development via Javascript/Typescript and React, but I am becoming more and more well versed in back-end architecture over time. I have experience with Node and Elixir, and have dabbled a bit in Ruby, Python, PHP, and C#. On the DB site of things, I have experience with PostgreSQL, MySQL, and a few others.
 
