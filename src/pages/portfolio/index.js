@@ -50,9 +50,9 @@ export default function index() {
           <div className="text-center">
             <PageTitle>Skills</PageTitle>
             <Subhead className="mb-4">
-              A range of technologies and tools I am well-versed in.
+              A range of technologies and tools I like to use.
             </Subhead>
-            {technologies?.map((tech) => (
+            {technologies.map((tech) => (
               <Badge key={tech} color="indigo" size="sm">
                 {tech}
               </Badge>

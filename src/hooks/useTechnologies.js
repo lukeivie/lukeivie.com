@@ -1,5 +1,8 @@
 export default function useTechnologies() {
   return [
+    "Typescript",
+    "NextJS",
+    "TailwindCSS",
     "Javascript",
     "Node",
     "Express",
@@ -10,13 +13,11 @@ export default function useTechnologies() {
     "MongoDB",
     "PostgreSQL",
     "HTML",
-    "NextJS",
-    "Bootstrap",
-    "TailwindCSS",
     "CSS",
     "SCSS",
     "Elixir",
     "C#",
+    "Bootstrap",
     "Wordpress",
     "Figma",
     "Sketch",
