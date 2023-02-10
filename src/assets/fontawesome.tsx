@@ -1,4 +1,5 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
+
 import {
   faSaxophone,
   faMoon as fasMoon,
@@ -16,6 +17,7 @@ import {
   faSun as fasSun,
   faSunglasses as fasSunglasses,
 } from "@fortawesome/pro-solid-svg-icons";
+
 import {
   faLongArrowAltRight,
   faLongArrowAltLeft,
@@ -40,6 +42,7 @@ import {
   faAngleDown,
   faHotel,
 } from "@fortawesome/pro-regular-svg-icons";
+
 import {
   faHouse as falHouse,
   faBriefcase as falBriefcase,
@@ -51,6 +54,7 @@ import {
   faSun as falSun,
   faSunglasses as falSunglasses,
 } from "@fortawesome/pro-light-svg-icons";
+
 import {
   faGithub,
   faTwitter,

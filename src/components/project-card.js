@@ -13,7 +13,7 @@ export default function ProjectCard({
   githubLink,
 }) {
   return (
-    <div className="rounded-lg overflow-hidden border-2 border-black dark:border-2 dark:border-indigo-900 bg-indigo-900">
+    <div className="rounded-lg overflow-hidden border-2 border-indigo-900 bg-indigo-900">
       <div className="flex flex-col">
         <div className={`group h-52 ${bgClassName} bg-cover bg-center`}>
           <div className="hidden lg:flex items-center justify-center bg-black w-full h-full bg-opacity-0 group-hover:bg-opacity-90">

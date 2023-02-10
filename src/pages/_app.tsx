@@ -1,4 +1,4 @@
-import "../styles/global.css";
+import "../styles/globals.css";
 import "../assets/fontawesome";
 
 import { Provider } from "react-redux";

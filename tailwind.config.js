@@ -1,22 +1,15 @@
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: [
+  content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          "DM Sans",
-          "Apple Color Emoji",
-          "Segoe UI Emoji",
-          "Segoe UI Symbol",
-          "Noto Color Emoji",
-          "sans-serif",
-        ],
+        sans: ["DM Sans", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         black: "#090B10",
@@ -31,14 +24,6 @@ module.exports = {
       screens: {
         xs: "390px",
       },
-    },
-  },
-  variants: {
-    extend: {
-      display: ["dark"],
-      borderColor: ["dark"],
-      borderWidth: ["dark"],
-      textColor: ["active"],
     },
   },
   plugins: [],

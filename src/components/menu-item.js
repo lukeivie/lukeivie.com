@@ -11,22 +11,22 @@ export default function MenuItem({ children, icon, to }) {
     to !== "/" ? router.pathname.includes(to) : router.pathname === to;
 
   return (
-    <Link href={to}>
-      <a
-        className={classNames("text-xl pr-8 py-4", {
-          "text-indigo-500 dark:text-indigo-500": active,
-          "text-gray-600 hover:text-gray-400 active:text-indigo-500 dark:active:text-indigo-500":
-            !active,
-        })}
-      >
-        {icon && (
-          <FontAwesomeIcon
-            icon={[active ? "fas" : "fal", icon]}
-            className="mr-2 inline-block"
-          />
-        )}
-        <span className="hidden lg:inline-flex">{children}</span>
-      </a>
+    <Link
+      href={to}
+      className={classNames("text-xl border-b-2 mr-8 pb-1", {
+        "border-white text-white": active,
+        "text-gray-600 hover:text-gray-400 active:text-white border-transparent":
+          !active,
+        "hover:border-slate-700": !active,
+      })}
+    >
+      {icon && (
+        <FontAwesomeIcon
+          icon={[active ? "fas" : "fal", icon]}
+          className="mr-2 inline-block"
+        />
+      )}
+      <span className="hidden lg:inline-flex">{children}</span>
     </Link>
   );
 }

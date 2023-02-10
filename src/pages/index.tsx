@@ -1,23 +1,25 @@
 import Head from "next/head";
-import Emoji from "../components/emoji";
 import Layout from "../components/layout";
 import Avatar from "../components/avatar";
 import Title from "../components/title";
 import Subhead from "../components/subhead";
 import Button from "../components/button";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRight } from "@fortawesome/pro-regular-svg-icons";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <Layout>
       <Head>
-        <title>Late Night Luke</title>
+        <title>Luke Ivie</title>
       </Head>
-      <div className="flex flex-col items-center justify-center w-full flex-1 text-center p-6 md:px-10 md:pb-10">
+      <div className="flex flex-col items-center justify-center w-full flex-1 p-6 md:px-10 md:pb-10">
         <Avatar />
-        <Title>Late Night Luke</Title>
+        <Title>Luke Ivie</Title>
         <Subhead>
-          Hi, I'm a Full-Stack Engineer with a background in UI/UX, based out of
-          sunny Arizona. <Emoji symbol="🏜" label="Desert emoji" />
+          Hi there, I'm a Software Engineer with a background in UI/UX, based
+          out of Arizona.
         </Subhead>
         <div className="flex flex-col items-center justify-center lg:flex-row">
           <Button

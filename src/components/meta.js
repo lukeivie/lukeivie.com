@@ -44,7 +44,7 @@ export default function Meta() {
         content="front-end, development, UX, UI, design, UX Design, UI Design, Front-End Development"
       />
       <meta name="robots" content="index, follow" />
-      <meta name="copyright" content="Late Night Luke 2021" />
+      <meta name="copyright" content="Luke Ivie 2021" />
       <meta name="language" content="EN" />
       <meta
         name="description"

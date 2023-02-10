@@ -17,6 +17,7 @@ export default function useTechnologies() {
     "SCSS",
     "Elixir",
     "C#",
+    "PHP",
     "Bootstrap",
     "Wordpress",
     "Figma",

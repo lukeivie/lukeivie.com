@@ -8,11 +8,19 @@
 }
 
 html {
-  background: #090B10;
+  background: #090b10;
 }
 
-.bg-latenightluke {
-  background-image: url("/bg/latenightluke-og.png") !important;
+.bg-lukeivie {
+  background-image: url("/bg/lukeivie-og.png") !important;
+}
+
+.bg-gifted {
+  background-image: url("/bg/gifted-og.png") !important;
+}
+
+.bg-discountmags {
+  background-image: url("/bg/discountmags-og.png") !important;
 }
 
 .bg-younglukemusic {
