@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 // import classNames from "classnames";
-// import { useDispatch } from "react-redux";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Logo from "./logo";
