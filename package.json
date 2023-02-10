@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@fancyapps/ui": "^4.0.27",
+    "@types/react": "^18.0.27",
     "autoprefixer": "^10.4.13",
     "classnames": "^2.3.1",
     "clsx": "^1.2.1",
