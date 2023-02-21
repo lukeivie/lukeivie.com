@@ -22,7 +22,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <Meta />
-      <div className="h-screen bg-white dark:bg-black overflow-y-scroll">
+      <div className="min-h-screen bg-white dark:bg-black">
         <div className={`${satoshi.variable} font-sans pt-6 pb-32 md:py-20 px-6`}>
           <Header />
           <main>{children}</main>
