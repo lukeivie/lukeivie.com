@@ -4,12 +4,13 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/views/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["DM Sans", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-satoshi)", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         black: "#090B10",
@@ -17,14 +18,13 @@ module.exports = {
         gray: colors.slate,
         blue: {
           twitter: "#1da1f2",
+          linkedIn: "#0A66C2",
         },
-        indigo: colors.indigo,
-        fuchsia: colors.fuchsia,
       },
       screens: {
         xs: "390px",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

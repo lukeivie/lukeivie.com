@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 type Props = {
-  href?: string;
+  href: string;
   link?: boolean;
   icon: IconProp;
   external?: boolean;
@@ -12,15 +12,7 @@ type Props = {
   children: ReactNode;
 };
 
-export default function Button({
-  href,
-  link,
-  icon,
-  external,
-  className,
-  children,
-  ...rest
-}: Props) {
+export default function Button({ href, link, icon, external, className, children, ...rest }: Props) {
   const buttonClasses = `px-6 py-2 active:bg-black bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 text-xl rounded-full ${className}`;
 
   if (link && !external) {
@@ -50,7 +42,7 @@ export default function Button({
   }
 }
 
-const Text = ({ icon, external, children }) => (
+const Text = ({ icon, external, children }: { icon: IconProp; external?: boolean; children: ReactNode }) => (
   <div className="group flex items-center justify-center">
     <FontAwesomeIcon icon={icon} className="mr-4 text-white" />
     <span className="text-white">{children}</span>

@@ -3,18 +3,9 @@ export default function useProjects() {
     {
       title: "Gifted",
       badge: "Web App",
-      technologies: "NextJS • React • TailwindCSS",
+      technologies: "NextJS • React • TailwindCSS • Prisma • PostgreSQL",
       bgClassName: "bg-gifted",
       siteLink: "https://getgifted.app",
-    },
-    {
-      title: "Luke Ivie",
-      badge: "This Site",
-      isMainBadge: true,
-      technologies: "NextJS • React • TailwindCSS",
-      bgClassName: "bg-lukeivie",
-      siteLink: "https://lukeivie.com",
-      githubLink: "https://github.com/lukeivie/lukeivie.com",
     },
     {
       title: "DiscountMags.com",
@@ -54,13 +45,6 @@ export default function useProjects() {
       technologies: "React • Bootstrap 4",
       bgClassName: "bg-younglukemusic",
       siteLink: "https://younglukemusic.com",
-    },
-    {
-      title: "911FosterPets",
-      badge: "Website & Web App",
-      technologies: "React • Bootstrap 4",
-      bgClassName: "bg-911fosterpets",
-      siteLink: "https://911fosterpets.com/",
     },
   ];
 }

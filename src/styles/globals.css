@@ -3,12 +3,8 @@
 @tailwind utilities;
 
 ::selection {
-  background: #ffffff;
+  background: #e5e5e5;
   color: #000000;
-}
-
-html {
-  background: #090b10;
 }
 
 .bg-lukeivie {

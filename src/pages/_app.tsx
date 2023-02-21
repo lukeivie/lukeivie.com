@@ -1,6 +1,12 @@
-import "../styles/globals.css";
-import "../assets/fontawesome";
+import "@/styles/globals.css";
+import "@/assets/fontawesome";
+import Layout from "@/components/layout";
+import type { AppProps } from "next/app";
 
-export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }

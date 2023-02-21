@@ -5,12 +5,12 @@ export default function useMenuItems() {
       pathname: "/",
     },
     {
-      name: "Portfolio",
-      pathname: "/portfolio",
+      name: "Work",
+      pathname: "/work",
     },
     {
-      name: "Blog",
-      pathname: "/blog",
+      name: "Writing",
+      pathname: "/writing",
     },
   ];
 }

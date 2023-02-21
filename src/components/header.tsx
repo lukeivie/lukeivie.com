@@ -3,49 +3,56 @@ import Link from "next/link";
 // import classNames from "classnames";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Logo from "./logo";
 import MenuItem from "./menu-item";
-import SocialIcon from "./social-icon";
+import { useMenuItems } from "@/hooks";
+import { cn } from "@/utils";
 
-export default function Header({ menuItems }) {
+export default function Header() {
+  const menuItems = useMenuItems();
+
   return (
-    <header className="bg-black w-full">
-      <div className="flex justify-between max-w-screen-2xl mx-auto py-2 px-5">
+    <header className="w-full fixed md:static bottom-0 inset-x-0 md:flex md:items-center md:justify-center z-50">
+      <div
+        className={cn(
+          "md:hidden h-[5px] dark:h-[8px] backdrop-blur-sm ",
+          "bg-gradient-to-b from-white/0 to-white",
+          "dark:bg-gradient-to-b dark:from-black/0 dark:to-black"
+        )}
+      />
+      <nav className="flex items-center justify-center p-6 bg-white dark:bg-black">
+        <ul className="w-full grid grid-cols-3 rounded-full p-1.5 gap-1 bg-neutral-100 dark:bg-slate-900/50">
+          {menuItems.map((item) => (
+            <li key={item.name} className="w-full">
+              <MenuItem to={item.pathname}>{item.name}</MenuItem>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      {/* <div className="flex justify-evenly py-2 px-5">
         <span className="items-center hidden lg:flex mr-10">
           <Link href="/" className="inline-flex items-center">
             <Logo width={108} height={80} />
           </Link>
         </span>
-        <span className="items-center hidden lg:flex w-full">
-          {menuItems?.map((item) => (
-            <MenuItem key={item?.name} to={item?.pathname} icon={item?.icon}>
-              {item?.name}
-            </MenuItem>
-          ))}
+        <span className="items-center justify-center hidden lg:flex w-full">
+          <nav>
+            {menuItems.map((item) => (
+              <MenuItem key={item.name} to={item.pathname} icon={item.icon}>
+                {item.name}
+              </MenuItem>
+            ))}
+          </nav>
         </span>
         <span className="flex items-center justify-between lg:justify-end w-full">
           <span className="flex lg:hidden">
             <Link href="/" className="inline-flex items-center">
               <Logo width={54} height={40} />
             </Link>
-          </span>
-          <span className="flex items-center justify-end lg:justify-start">
-            <SocialIcon
-              href="https://twitter.com/IvieLuke"
-              icon={["fab", "twitter"]}
-            />
-            <SocialIcon
-              href="https://www.linkedin.com/in/luke-ivie/"
-              icon={["fab", "linkedin"]}
-            />
-            <SocialIcon
-              href="https://github.com/lukeivie"
-              icon={["fab", "github"]}
-            />
-            {/* <DarkModeButton darkMode={darkMode} className="ml-3 lg:ml-3" /> */}
-          </span>
-        </span>
-      </div>
+          </span> */}
+      {/* <DarkModeButton darkMode={darkMode} className="ml-3 lg:ml-3" /> */}
+      {/* </span> */}
+      {/* </span>
+      </div> */}
     </header>
   );
 }
