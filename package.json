@@ -26,14 +26,14 @@
     "remark-html": "^13.0.2"
   },
   "devDependencies": {
-    "@fancyapps/ui": "^4.0.27",
+    "@fancyapps/ui": "^5.0.3",
+    "@tailwindcss/typography": "^0.5.9",
     "@types/fancybox": "^3.5.3",
     "@types/react": "^18.0.27",
     "autoprefixer": "^10.4.13",
     "classnames": "^2.3.1",
     "clsx": "^1.2.1",
     "postcss": "^8.4.21",
-    "@tailwindcss/typography": "^0.5.9",
     "tailwindcss": "^3.2.7"
   }
 }

@@ -5,8 +5,8 @@ export default function useMenuItems() {
       pathname: "/",
     },
     {
-      name: "Work",
-      pathname: "/work",
+      name: "Portfolio",
+      pathname: "/portfolio",
     },
     {
       name: "Writing",

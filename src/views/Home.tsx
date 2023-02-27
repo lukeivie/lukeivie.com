@@ -54,7 +54,7 @@ export default function Home({}: Props) {
                 />
               </span>
             </div>
-            <div className="mb-6 md:mb-10 text-lg md:text-xl text-neutral-700 dark:text-slate-400 prose prose-headings:dark:text-slate-400 prose-h4:mt-12 prose-a:dark:text-slate-400 prose-a:transition-colors">
+            <div className="mb-6 md:mb-10 text-lg md:text-xl text-neutral-700 dark:text-slate-400 prose prose-headings:dark:text-slate-400 prose-h4:mt-12 prose-a:dark:text-slate-300 prose-a:transition-colors">
               <p>
                 <span className="inline-block font-extrabold text-4xl text-neutral-900 dark:text-slate-200 mr-2">
                   Luke Ivie.

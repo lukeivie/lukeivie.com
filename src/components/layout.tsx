@@ -1,22 +1,8 @@
 import { ReactNode } from "react";
-import localFont from "@next/font/local";
 
 import Meta from "./meta";
 import Header from "./header";
-
-const satoshi = localFont({
-  src: [
-    {
-      path: "../assets/fonts/Satoshi-Variable.woff2",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Satoshi-VariableItalic.woff2",
-      style: "italic",
-    },
-  ],
-  variable: "--font-satoshi",
-});
+import { satoshi } from "@/lib/font";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
