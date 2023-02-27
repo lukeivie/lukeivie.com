@@ -7,7 +7,7 @@ export default function index() {
   return (
     <>
       <Head>
-        <title>Writing | Luke Ivie</title>
+        <title>Writing - Luke Ivie</title>
       </Head>
       <Transition
         appear

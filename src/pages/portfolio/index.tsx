@@ -23,7 +23,7 @@ export default function index() {
   return (
     <>
       <Head>
-        <title>Work | Luke Ivie</title>
+        <title>Portfolio - Luke Ivie</title>
       </Head>
       <Transition
         appear
