@@ -123,5 +123,5 @@ const GraphicCard = ({ alt, src, width, height, className }: GraphicCardProps) =
 };
 
 function Section({ children }: { children: ReactNode }) {
-  return <div className="max-w-3xl mx-auto pt-6 lg:pt-20 lg:mb-28">{children}</div>;
+  return <div className="max-w-3xl mx-auto mb-10 lg:mb-28">{children}</div>;
 }
