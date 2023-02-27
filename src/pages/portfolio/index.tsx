@@ -8,7 +8,6 @@ import PageTitle from "../../components/page-title";
 import Subhead from "../../components/subhead";
 import ProjectCard from "../../components/project-card";
 import Badge from "../../components/badge";
-import Fancybox from "../../components/fancybox";
 import { useTechnologies, useProjects } from "../../hooks";
 import { cn } from "@/utils";
 import { Transition } from "@headlessui/react";
@@ -117,7 +116,7 @@ type GraphicCardProps = ImageProps & {
 const GraphicCard = ({ alt, src, width, height, className }: GraphicCardProps) => {
   return (
     <div className={cn("rounded-md overflow-hidden drop-shadow-lg border-2 border-black dark:border-none", className)}>
-      <Image src={src} alt={alt} width={width} height={height} data-fancybox="gallery" data-src={src} />
+      <Image src={src} alt={alt} width={width} height={height} />
     </div>
   );
 };
