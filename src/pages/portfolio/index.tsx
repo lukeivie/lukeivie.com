@@ -92,18 +92,6 @@ export default function index() {
               </div>
             </div>
           </Section>
-
-          {/* <div className="max-w-3xl mx-auto pt-6 lg:pt-20 lg:mb-28">
-        <div className="flex flex-col">
-          <div>
-            <PageTitle>Branding and Logo Design</PageTitle>
-            <Subhead>
-              I don't do a ton of branding or logo design anymore, but I've done
-              a few that I think turned out pretty nicely.
-            </Subhead>
-          </div>
-        </div>
-      </div> */}
         </div>
       </Transition>
     </>
@@ -115,9 +103,13 @@ type GraphicCardProps = ImageProps & {
 };
 const GraphicCard = ({ alt, src, width, height, className }: GraphicCardProps) => {
   return (
-    <div className={cn("rounded-md overflow-hidden drop-shadow-lg border-2 border-black dark:border-none", className)}>
-      <Image src={src} alt={alt} width={width} height={height} />
-    </div>
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={cn("rounded-md drop-shadow-lg border-2 border-black dark:border-none", className)}
+    />
   );
 };
 
