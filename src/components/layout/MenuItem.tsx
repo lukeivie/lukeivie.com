@@ -22,10 +22,16 @@ export default function MenuItem({ children, icon, to }: Props) {
       className={cn(
         "text-center block font-semibold text-base md:text-lg px-5 py-2 rounded-full transition-colors duration-200",
         {
-          "text-white bg-neutral-900": active,
-          "dark:text-white dark:bg-slate-800": active,
-          "text-neutral-500 hover:text-neutral-800 active:text-neutral-900": !active,
+          "text-white": active,
+          "bg-neutral-900": active,
+
+          "dark:text-white": active,
+          "dark:bg-slate-800": active,
+
+          "bg-transparent hover:bg-transparent active:bg-neutral-900": !active,
+          "text-neutral-500 hover:text-neutral-800 active:text-white": !active,
           "dark:text-slate-500 dark:hover:text-slate-400 dark:active:text-white": !active,
+          "dark:active:bg-slate-800": !active,
         }
       )}
     >

@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@/utils";
-import MenuItem from "./menu-item";
+import MenuItem from "./MenuItem";
 import { useMenuItems } from "@/hooks";
 
 export default function Header() {

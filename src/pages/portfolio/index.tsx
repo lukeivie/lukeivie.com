@@ -1,28 +1,27 @@
 import Head from "next/head";
 import React, { ReactNode } from "react";
-import { satoshi } from "@/lib/font";
-import Image, { ImageProps } from "next/image";
+// import Image, { ImageProps } from "next/image";
 
-import Layout from "../../components/layout";
-import PageTitle from "../../components/page-title";
-import Subhead from "../../components/subhead";
-import ProjectCard from "../../components/project-card";
-import Badge from "../../components/badge";
-import { useTechnologies, useProjects } from "../../hooks";
-import { cn } from "@/utils";
+// import Layout from "../../components/layout";
+import PageTitle from "../../components/PageTitle";
+// import Subhead from "../../components/subhead";
+// import ProjectCard from "../../components/project-card";
+// import Badge from "../../components/ui/Badge";
+// import { useTechnologies, useProjects } from "../../hooks";
+// import { cn } from "@/utils";
 import { Transition } from "@headlessui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExclamationTriangle } from "@fortawesome/pro-regular-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faExclamationTriangle } from "@fortawesome/pro-regular-svg-icons";
 import { Alert } from "@/components";
 
 export default function index() {
-  const projects = useProjects();
-  const technologies = useTechnologies();
+  // const projects = useProjects();
+  // const technologies = useTechnologies();
 
   return (
     <>
       <Head>
-        <title>Portfolio - Luke Ivie</title>
+        <title>Projects - Luke Ivie</title>
       </Head>
       <Transition
         appear
@@ -39,9 +38,7 @@ export default function index() {
             <div className="flex flex-col">
               <div className="prose max-w-none">
                 <PageTitle>Portfolio</PageTitle>
-                <Alert color="warning">
-                  I am actively working on revamping this page and updating these projects. Check back soon!
-                </Alert>
+                <Alert color="warning">I am actively working on revamping this page. Check back soon!</Alert>
               </div>
             </div>
           </Section>
@@ -66,7 +63,7 @@ export default function index() {
             </div>
           </div> */}
 
-          <Section>
+          {/* <Section>
             <div className="flex flex-col">
               <div className="prose">
                 <PageTitle>Graphic Work</PageTitle>
@@ -75,7 +72,7 @@ export default function index() {
                   <a href="https://discountmags.com" target="_blank" className="text-neutral-800 dark:text-slate-200">
                     DiscountMags.com
                   </a>
-                  . These are a few of my favorites over the years. I have probably done over 2,000 of these.
+                  . These are a few of my favorites over the years.
                 </p>
               </div>
               <div className="columns-2 md:columns-3 gap-6 md:gap-10 space-y-6 md:space-y-10">
@@ -91,28 +88,28 @@ export default function index() {
                 <GraphicCard src="/graphics/12.gif" width={1200} height={2300} alt="email-graphic-10" />
               </div>
             </div>
-          </Section>
+          </Section> */}
         </div>
       </Transition>
     </>
   );
 }
 
-type GraphicCardProps = ImageProps & {
-  className?: string;
-};
-const GraphicCard = ({ alt, src, width, height, className }: GraphicCardProps) => {
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={cn("rounded-md drop-shadow-lg border-2 border-black dark:border-none", className)}
-    />
-  );
-};
+// type GraphicCardProps = ImageProps & {
+//   className?: string;
+// };
+// const GraphicCard = ({ alt, src, width, height, className }: GraphicCardProps) => {
+//   return (
+//     <Image
+//       src={src}
+//       alt={alt}
+//       width={width}
+//       height={height}
+//       className={cn("rounded-md drop-shadow-lg border-2 border-black dark:border-none dark:opacity-80", className)}
+//     />
+//   );
+// };
 
 function Section({ children }: { children: ReactNode }) {
-  return <div className="max-w-3xl mx-auto mb-10 lg:mb-28">{children}</div>;
+  return <div className="max-w-3xl px-0 md:px-3 mx-auto mb-10 lg:mb-28">{children}</div>;
 }

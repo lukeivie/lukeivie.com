@@ -1,8 +1,8 @@
-import Meta from "./meta";
+import Meta from "../meta";
 import { cn } from "@/utils";
-import Header from "./header";
+import Header from "./Header";
 import { ReactNode } from "react";
-import { satoshi } from "@/lib/font";
+import { satoshi } from "@/lib/fonts";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (

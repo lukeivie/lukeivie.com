@@ -1,4 +1,4 @@
-export { default as Render } from "./render";
-export { default as PageTitle } from "./page-title";
+export { default as Render } from "./ui/Render";
+export { default as PageTitle } from "./PageTitle";
 
 export * from "./ui";

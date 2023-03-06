@@ -1,5 +1,5 @@
-import { Home } from "@/views";
+import { AboutView } from "@/views";
 
 export default function Index() {
-  return <Home />;
+  return <AboutView />;
 }

@@ -1,15 +1,15 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import profileImage from "../assets/profile-image.jpg";
 import { Transition } from "@headlessui/react";
+import profileImage from "@/assets/images/profile-image.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faArrowUpRight } from "@fortawesome/pro-regular-svg-icons";
+import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 type Props = {};
 
-export default function Home({}: Props) {
+export default function AboutView({}: Props) {
   // function getCurrentTime() {
   //   return new Date().toLocaleTimeString("en-US", {
   //     timeZone: "America/Phoenix",
@@ -42,24 +42,24 @@ export default function Home({}: Props) {
         leaveTo="-translate-y-10 opacity-0"
       >
         <div className="flex flex-col items-center justify-center dark:text-slate-300 text-neutral-800">
-          <div className="max-w-3xl w-full">
+          <div className="max-w-3xl px-0 md:px-3 w-full">
             <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between mb-6">
-              <span className="inline-flex dark:bg-gradient-to-br dark:from-slate-200 dark:via-slate-700 dark:to-slate-900 dark:p-[1px] rounded-full">
-                <Image
-                  src={profileImage}
-                  alt="Luke Ivie"
-                  width={100}
-                  height={100}
-                  className="rounded-full border-2 border-white dark:border-black grayscale dark:grayscale-0"
-                />
-              </span>
+              {/* <span className="inline-flex dark:bg-gradient-to-br dark:from-slate-200 dark:via-slate-700 dark:to-slate-900 dark:p-[1px] rounded-full"> */}
+              <Image
+                src={profileImage}
+                alt="Luke Ivie"
+                width={100}
+                height={100}
+                className="rounded-full grayscale dark:grayscale-0"
+              />
+              {/* </span> */}
             </div>
             <div className="mb-6 md:mb-10 text-lg md:text-xl text-neutral-700 dark:text-slate-400 prose prose-headings:dark:text-slate-400 prose-h4:mt-12 prose-a:dark:text-slate-300 prose-a:transition-colors">
               <p>
                 <span className="inline-block font-extrabold text-4xl text-neutral-900 dark:text-slate-200 mr-2">
                   Luke Ivie.
                 </span>
-                I specialize in crafting simple, <i>intuitive</i> user experiences.
+                I specialize in crafting simple, intuitive user experiences.
               </p>
               <p>
                 I am a Full-Stack Engineer with a background in UI/UX Design.{" "}
@@ -70,7 +70,7 @@ export default function Home({}: Props) {
               </p>
               <p>
                 My preferred stack is TypeScript, React, and Prisma, and I'm a big fan of Next.js and TailwindCSS. I
-                also dabble in Elixir, C#, and PHP.
+                also have experience with Elixir, C#, and PHP.
               </p>
               <p className="hidden md:inline">
                 Currently at{" "}
@@ -120,7 +120,7 @@ export default function Home({}: Props) {
               <a
                 href="https://www.github.com/lukeivie"
                 target="_blank"
-                className="flex items-center text-base md:text-lg transition-colors duration-200 py-0 md:pb-2"
+                className="flex items-center text-base md:text-lg hover:text-slate-400 transition-colors duration-200 py-0 md:pb-2"
               >
                 <FontAwesomeIcon icon={faGithub} className="mr-1" fixedWidth />{" "}
                 <span className="font-semibold">GitHub</span>
