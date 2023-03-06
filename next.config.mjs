@@ -1,3 +1,6 @@
 import { withContentlayer } from "next-contentlayer";
 
-export default withContentlayer({});
+/** @type {import('next').NextConfig} */
+export default withContentlayer({
+  reactStrictMode: true,
+});
