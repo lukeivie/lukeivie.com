@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { Transition } from "@headlessui/react";
-import { Alert, PageTitle } from "@/components";
+import { PageTitle } from "@/components";
 import { compareDesc, format, parseISO } from "date-fns";
 import { Post, allPosts } from "contentlayer/generated";
 import Link from "next/link";
