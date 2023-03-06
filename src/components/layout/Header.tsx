@@ -16,7 +16,7 @@ export default function Header() {
         )}
       />
       <nav className="flex items-center justify-center p-5 bg-white dark:bg-black">
-        <ul className="w-full grid grid-cols-3 rounded-full p-1.5 gap-1 bg-neutral-100 dark:bg-slate-900/50">
+        <ul className="w-full grid grid-cols-2 rounded-full p-1.5 gap-1 bg-neutral-100 dark:bg-slate-900/50">
           {menuItems.map((item) => (
             <li key={item.name} className="w-full">
               <MenuItem to={item.pathname}>{item.name}</MenuItem>

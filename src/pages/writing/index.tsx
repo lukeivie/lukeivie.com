@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { Transition } from "@headlessui/react";
-import { PageTitle } from "@/components";
+import { Alert, PageTitle } from "@/components";
 import { compareDesc, format, parseISO } from "date-fns";
 import { Post, allPosts } from "contentlayer/generated";
 import Link from "next/link";
@@ -31,7 +31,8 @@ export default function Writing({ posts }: { posts: Post[] }) {
       >
         <div className="max-w-3xl mx-auto pt-0 pb-12">
           <PageTitle className="mb-10 mx-0 md:mx-3">Writing</PageTitle>
-          {posts.map((post: Post) => {
+          <Alert>Coming soon!</Alert>
+          {/* {posts.map((post: Post) => {
             const slug = post._raw.flattenedPath;
             return (
               <article key={slug} className="w-full">
@@ -47,7 +48,7 @@ export default function Writing({ posts }: { posts: Post[] }) {
                 </Link>
               </article>
             );
-          })}
+          })} */}
         </div>
       </Transition>
     </>

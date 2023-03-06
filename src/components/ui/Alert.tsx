@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/pro-regular-svg-icons";
 
 type Props = {
-  color: "warning";
+  color?: "warning";
   children: React.ReactNode;
 };
 
-export default function Alert({ color, children }: Props) {
+export default function Alert({ color = "warning", children }: Props) {
   return (
     <div
       className={cn("px-4 pt-2 pb-3 rounded-lg font-normal leading-normal text-lg md:text-xl mb-5", {
