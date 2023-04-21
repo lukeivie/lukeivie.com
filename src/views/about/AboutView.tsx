@@ -59,18 +59,16 @@ export default function AboutView({}: Props) {
                 <span className="inline-block font-extrabold text-4xl text-neutral-900 dark:text-slate-200 mr-2">
                   Luke Ivie.
                 </span>
-                I specialize in crafting simple, intuitive user experiences.
+                I am a full-stack software engineer who specializes in building web applications using
+                JavaScript/Typescript and React.
               </p>
               <p>
-                I am a Full-Stack Engineer with a background in UI/UX Design.{" "}
-                <span className="hidden md:inline">
-                  I strive to take what I've learned from product design over the years and apply those principles to
-                  code.
-                </span>
+                I am trained in agile and scrum methodologies and have worked for multiple SaaS companies. I also have
+                UI/UX design experience, and I tend to work hybrid engineering/design roles.
               </p>
               <p>
-                My preferred stack is TypeScript, React, and Prisma, and I'm a big fan of Next.js and TailwindCSS. I
-                also have experience with Elixir, C#, and PHP.
+                I am highly passionate about technology and user experience. I believe every decision made in software
+                should revolve around crafting the best possible experience for the end users.
               </p>
               <p className="hidden md:inline">
                 Currently at{" "}
