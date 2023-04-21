@@ -98,15 +98,6 @@ export default function AboutView({}: Props) {
             </div>
             <p className="flex items-center flex-wrap gap-6 md:gap-10 pt-2 md:pt-0">
               <a
-                href="https://twitter.com/IvieLuke"
-                target="_blank"
-                className="flex items-center text-base md:text-lg hover:text-blue-twitter transition-colors duration-200 py-0 md:pb-2"
-              >
-                <FontAwesomeIcon icon={faTwitter} className="mr-1" fixedWidth />{" "}
-                <span className="font-semibold">Twitter</span>
-                <FontAwesomeIcon icon={faArrowUpRight} className="ml-2 mt-1" />
-              </a>
-              <a
                 href="https://www.linkedin.com/in/luke-ivie/"
                 target="_blank"
                 className="flex items-center text-base md:text-lg hover:text-blue-linkedIn transition-colors duration-200 py-0 md:pb-2"
