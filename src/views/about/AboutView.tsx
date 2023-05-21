@@ -5,27 +5,11 @@ import { Transition } from "@headlessui/react";
 import profileImage from "@/assets/images/profile-image.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRight } from "@fortawesome/pro-regular-svg-icons";
-import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 type Props = {};
 
 export default function AboutView({}: Props) {
-  // function getCurrentTime() {
-  //   return new Date().toLocaleTimeString("en-US", {
-  //     timeZone: "America/Phoenix",
-  //   });
-  // }
-
-  // const [currentDateTime, setCurrentDateTime] = useState(getCurrentTime());
-
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => setCurrentDateTime(getCurrentTime()), 1000);
-
-  //   return () => {
-  //     clearInterval(intervalId);
-  //   };
-  // }, []);
-
   return (
     <>
       <Head>
@@ -89,11 +73,8 @@ export default function AboutView({}: Props) {
                 </span>
               </p>
               <p>
-                Self-improvement is my primary focus in life. I seek to always be learning{" "}
-                <span className="md:hidden">the new</span>
-                <span className="hidden md:inline">new things</span>, evolving my craft, and becoming a better engineer,
-                designer and
-                <span className="hidden md:inline"> overall</span> human-being.
+                Self-improvement is my primary focus in life. I seek to always be learning new things, evolving my
+                craft, and becoming a better engineer, designer and overall human-being.
               </p>
             </div>
             <p className="flex items-center flex-wrap gap-6 md:gap-10 pt-2 md:pt-0">
@@ -116,27 +97,6 @@ export default function AboutView({}: Props) {
                 <FontAwesomeIcon icon={faArrowUpRight} className="ml-2 mt-1" />
               </a>
             </p>
-
-            {/* <Transition
-              appear
-              show
-              enter="transition-opacity delay-1000 duration-500"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="transition-opacity delay-1000 duration-500"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <p className="text-neutral-500 mt-10">
-                <span>
-                  <FontAwesomeIcon icon={faClock} className="mr-1.5" />
-                  {currentDateTime}
-                </span>
-                <span className="mx-2 opacity-50">–</span>
-                <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-1.5" />
-                Mesa, Arizona
-              </p>
-            </Transition> */}
           </div>
         </div>
       </Transition>
