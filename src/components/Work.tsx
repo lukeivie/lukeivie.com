@@ -3,17 +3,23 @@ import { Section } from "./Section";
 import { SectionHeader } from "./SectionHeader";
 import { ExternalLink } from "lucide-react";
 import { Badge } from "./Badge";
-import namely from "public/images/experience/namely.png";
-import discountMags from "public/images/experience/discountmags.png";
-import openforce from "public/images/experience/openforce.png";
-import tanga from "public/images/experience/tanga.png";
+import { Image } from "./Image";
 import { Separator } from "./Separator";
 import { Fragment } from "react/jsx-runtime";
+
+import namelyLight from "public/images/experience/namely/light.png";
+import namelyDark from "public/images/experience/namely/dark.png";
+import discountMagsLight from "public/images/experience/discountmags/light.png";
+import discountMagsDark from "public/images/experience/discountmags/dark.png";
+import openforceLight from "public/images/experience/openforce/light.png";
+import openforceDark from "public/images/experience/openforce/dark.png";
+import tangaLight from "public/images/experience/tanga/light.png";
+import tangaDark from "public/images/experience/tanga/dark.png";
 
 interface Job {
   id: string;
   href: string;
-  image: ImageMetadata;
+  image: { dark: ImageMetadata; light: ImageMetadata };
   company: string;
   jobTitle: string;
   start: string;
@@ -25,7 +31,7 @@ const jobs: Job[] = [
   {
     id: "e1",
     href: "https://namely.com",
-    image: namely,
+    image: { light: namelyLight, dark: namelyDark },
     company: "Namely",
     jobTitle: "Senior Software Engineer",
     start: "2023",
@@ -35,7 +41,7 @@ const jobs: Job[] = [
   {
     id: "e2",
     href: "https://discountmags.com",
-    image: discountMags,
+    image: { light: discountMagsLight, dark: discountMagsDark },
     company: "DiscountMags",
     jobTitle: "Full-Stack Software Engineer",
     start: "2022",
@@ -44,7 +50,7 @@ const jobs: Job[] = [
   {
     id: "e3",
     href: "https://oforce.com",
-    image: openforce,
+    image: { light: openforceLight, dark: openforceDark },
     company: "Openforce",
     jobTitle: "UI Engineer/Product Designer",
     start: "2018",
@@ -53,7 +59,7 @@ const jobs: Job[] = [
   {
     id: "e4",
     href: "https://tanga.com",
-    image: tanga,
+    image: { light: tangaLight, dark: tangaDark },
     company: "Tanga",
     jobTitle: "UI Developer/UI Designer",
     start: "2015",
@@ -68,7 +74,16 @@ export const Work = () => {
       <ul className="flex flex-col gap-1">
         {jobs.map(
           (
-            { id, href, image, company, jobTitle, start, end, isCurrent },
+            {
+              id,
+              href,
+              image: { dark, light },
+              company,
+              jobTitle,
+              start,
+              end,
+              isCurrent,
+            },
             i
           ) => (
             <Fragment key={id}>
@@ -85,11 +100,7 @@ export const Work = () => {
                     "dark:hover:bg-zinc-900"
                   )}
                 >
-                  <img
-                    src={image?.src}
-                    alt={company}
-                    className="rounded-md w-12 h-12 text-xs break-words shadow-lg border dark:border-zinc-800"
-                  />
+                  <Image alt={company} dark={dark} light={light} />
                   <div className="flex w-full flex-col sm:flex-row justify-between items-start sm:items-center">
                     <div className="flex flex-col">
                       <div className="flex gap-1 items-center">
