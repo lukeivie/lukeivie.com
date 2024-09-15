@@ -23,11 +23,11 @@ export const SocialLinks = () => (
             target="_blank"
             href={href}
             className={cn(
-              "flex items-center gap-2 dark:opacity-75 p-4 rounded-md",
+              "flex items-center gap-2 p-4 rounded-md",
               "hover:bg-zinc-100",
               "text-zinc-700 hover:text-zinc-950",
-              "dark:hover:bg-amber-200",
-              "dark:text-amber-200 dark:hover:text-zinc-950"
+              "dark:hover:bg-zinc-900 dark:active:bg-zinc-800",
+              "dark:text-zinc-400 dark:hover:text-zinc-300 dark:active:text-zinc-200"
             )}
           >
             <Icon />

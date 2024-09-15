@@ -78,22 +78,20 @@ export const Work = () => {
                   target="_blank"
                   className={cn(
                     "group",
-                    "flex flex-row items-center justify-between",
+                    "flex sm:items-center gap-4",
                     "text-base",
                     "rounded-lg p-4",
                     "hover:bg-zinc-100",
                     "dark:hover:bg-zinc-900"
                   )}
                 >
-                  <div className="flex items-center gap-4">
-                    <div>
-                      <img
-                        src={image?.src}
-                        alt={company}
-                        className="rounded-md w-12 h-12 text-xs break-words shadow-lg border dark:border-zinc-800"
-                      />
-                    </div>
-                    <div>
+                  <img
+                    src={image?.src}
+                    alt={company}
+                    className="rounded-md w-12 h-12 text-xs break-words shadow-lg border dark:border-zinc-800"
+                  />
+                  <div className="flex w-full flex-col sm:flex-row justify-between items-start sm:items-center">
+                    <div className="flex flex-col">
                       <div className="flex gap-1 items-center">
                         <div className="flex items-center gap-2">
                           <h3 className="text-base font-medium">{company}</h3>
@@ -106,10 +104,10 @@ export const Work = () => {
                       </div>
                       <p className="text-base text-zinc-500">{jobTitle}</p>
                     </div>
+                    <div className="flex text-sm mt-3 sm:mt-0">
+                      {start} &mdash; {end}
+                    </div>
                   </div>
-                  <span className="text-sm">
-                    {start} &mdash; {end}
-                  </span>
                 </a>
               </li>
               {!!jobs[i + 1] && <Separator className="mx-4" />}
