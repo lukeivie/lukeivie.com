@@ -9,7 +9,12 @@ const { pageTitle = "Luke Ivie - Senior Software Engineer" } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      id="faviconTag"
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon/light.svg"
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
@@ -34,3 +39,5 @@ const { pageTitle = "Luke Ivie - Senior Software Engineer" } = Astro.props;
     </main>
   </body>
 </html>
+
+<script src="../scripts/darkMode.ts"></script>
