@@ -20,7 +20,7 @@ export const Summary = () => (
       <p>
         I am passionate about creating simple and elegant digital experiences.
       </p>
-      <p>
+      <p className="hidden sm:block">
         Currently Senior Software Engineer at{" "}
         <Link href="https://namely.com">Namely</Link>. Previously Full-Stack
         Engineer at <Link href="https://discountmags.com">DiscountMags</Link>.
