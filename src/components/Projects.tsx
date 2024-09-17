@@ -42,7 +42,7 @@ const projects: Project[] = [
       light: giftedLight,
     },
     description:
-      "An all-in-one gift management solution I built to make the holidays easier.",
+      "An all-in-one gift management application I built to make the holidays easier.",
   },
 ];
 
@@ -63,17 +63,36 @@ export const Projects = () => (
                   "text-base",
                   "rounded-lg p-4",
                   "hover:bg-zinc-100",
-                  "dark:hover:bg-zinc-900"
+                  "dark:hover:bg-zinc-900 dark:active:bg-zinc-800"
                 )}
               >
                 <div className="flex gap-4">
                   <Image alt={name} dark={dark} light={light} />
                   <div>
-                    <h3 className="text-base font-medium">{name}</h3>
-                    <p className="text-base text-zinc-500">{description}</p>
+                    <h3
+                      className={cn(
+                        "text-base font-medium",
+                        "dark:group-hover:text-zinc-300 dark:group-active:text-zinc-200"
+                      )}
+                    >
+                      {name}
+                    </h3>
+                    <p
+                      className={cn(
+                        "text-base text-zinc-500",
+                        "dark:group-hover:text-zinc-400 dark:group-active:text-zinc-300"
+                      )}
+                    >
+                      {description}
+                    </p>
                   </div>
                 </div>
-                <div className="p-4 text-zinc-600">
+                <div
+                  className={cn(
+                    "text-zinc-600 self-center",
+                    "dark:group-hover:text-zinc-500 dark:group-active:text-zinc-400"
+                  )}
+                >
                   <ExternalLink />
                 </div>
               </a>

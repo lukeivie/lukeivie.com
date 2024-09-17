@@ -6,6 +6,7 @@ import { Badge } from "./Badge";
 import { Image } from "./Image";
 import { Separator } from "./Separator";
 import { Fragment } from "react/jsx-runtime";
+import { Timeline } from "./Timeline";
 
 import namelyLight from "public/images/experience/namely/light.png";
 import namelyDark from "public/images/experience/namely/dark.png";
@@ -35,7 +36,7 @@ const jobs: Job[] = [
     company: "Namely",
     jobTitle: "Senior Software Engineer",
     start: "2023",
-    end: "present",
+    end: "Now",
     isCurrent: true,
   },
   {
@@ -52,7 +53,7 @@ const jobs: Job[] = [
     href: "https://oforce.com",
     image: { light: openforceLight, dark: openforceDark },
     company: "Openforce",
-    jobTitle: "UI Engineer/Product Designer",
+    jobTitle: "UI Engineer, Full-Stack Developer",
     start: "2018",
     end: "2022",
   },
@@ -97,7 +98,7 @@ export const Work = () => {
                     "text-base",
                     "rounded-lg p-4",
                     "hover:bg-zinc-100",
-                    "dark:hover:bg-zinc-900"
+                    "dark:hover:bg-zinc-900 dark:active:bg-zinc-800"
                   )}
                 >
                   <Image alt={company} dark={dark} light={light} />
@@ -105,7 +106,14 @@ export const Work = () => {
                     <div className="flex flex-col">
                       <div className="flex gap-1 items-center">
                         <div className="flex items-center gap-2">
-                          <h3 className="text-base font-medium">{company}</h3>
+                          <h3
+                            className={cn(
+                              "text-base font-medium",
+                              "dark:group-hover:text-zinc-300 dark:group-active:text-zinc-200"
+                            )}
+                          >
+                            {company}
+                          </h3>
                           {isCurrent && <Badge>Current</Badge>}
                         </div>
                         <ExternalLink
@@ -113,11 +121,16 @@ export const Work = () => {
                           className="opacity-0 group-hover:opacity-100 transition-all duration-200 text-zinc-400"
                         />
                       </div>
-                      <p className="text-base text-zinc-500">{jobTitle}</p>
+                      <p
+                        className={cn(
+                          "text-base text-zinc-500",
+                          "dark:group-hover:text-zinc-400 dark:group-active:text-zinc-300"
+                        )}
+                      >
+                        {jobTitle}
+                      </p>
                     </div>
-                    <div className="flex text-sm mt-3 sm:mt-0">
-                      {start} &mdash; {end}
-                    </div>
+                    <Timeline start={start} end={end} />
                   </div>
                 </a>
               </li>

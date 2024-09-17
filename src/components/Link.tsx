@@ -4,15 +4,21 @@ import type { ReactNode } from "react";
 interface Props {
   href: string;
   children?: ReactNode;
+  soft?: boolean;
 }
 
-export const Link = ({ href, children }: Props) => (
+export const Link = ({ href, children, soft }: Props) => (
   <a href={href} target="_blank" className="relative inline-flex group">
     <span
       className={cn(
         "font-medium",
         "text-zinc-700 group-hover:text-zinc-900 group-active:text-amber-800",
-        "dark:text-zinc-300 dark:group-hover:text-zinc-200 dark:group-active:text-zinc-100"
+        {
+          "dark:text-zinc-300 dark:group-hover:text-zinc-200 dark:group-active:text-zinc-100":
+            !soft,
+          "dark:text-zinc-400 dark:group-hover:text-zinc-300 dark:group-active:text-zinc-200":
+            soft,
+        }
       )}
     >
       {children}
