@@ -18,7 +18,7 @@ import tangaLight from "public/images/experience/tanga/light.png";
 import tangaDark from "public/images/experience/tanga/dark.png";
 
 interface Job {
-  id: string;
+  id: number;
   href: string;
   image: { dark: ImageMetadata; light: ImageMetadata };
   company: string;
@@ -30,7 +30,7 @@ interface Job {
 
 const jobs: Job[] = [
   {
-    id: "e1",
+    id: 1,
     href: "https://namely.com",
     image: { light: namelyLight, dark: namelyDark },
     company: "Namely",
@@ -40,7 +40,7 @@ const jobs: Job[] = [
     isCurrent: true,
   },
   {
-    id: "e2",
+    id: 2,
     href: "https://discountmags.com",
     image: { light: discountMagsLight, dark: discountMagsDark },
     company: "DiscountMags",
@@ -49,16 +49,16 @@ const jobs: Job[] = [
     end: "2023",
   },
   {
-    id: "e3",
+    id: 3,
     href: "https://oforce.com",
     image: { light: openforceLight, dark: openforceDark },
     company: "Openforce",
-    jobTitle: "UI Engineer, Full-Stack Developer",
+    jobTitle: "Full-Stack Developer, UX Developer II",
     start: "2018",
     end: "2022",
   },
   {
-    id: "e4",
+    id: 4,
     href: "https://tanga.com",
     image: { light: tangaLight, dark: tangaDark },
     company: "Tanga",
