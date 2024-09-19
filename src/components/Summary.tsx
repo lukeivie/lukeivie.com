@@ -14,8 +14,8 @@ export const Summary = () => (
     </h1>
     <div className="flex flex-col gap-4 font-normal text-zinc-600 dark:text-zinc-400 leading-normal text-base sm:text-lg px-4">
       <p>
-        Hi there, I am a Senior Software Engineer who specializes in building
-        web applications using Typescript and React.
+        I am a Senior Software Engineer who specializes in building web
+        applications using Typescript and React.
       </p>
       <p>
         I am passionate about creating simple and elegant digital experiences.
