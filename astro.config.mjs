@@ -1,10 +1,13 @@
 import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
 const config = defineConfig({
-  integrations: [tailwind(), react()],
+  integrations: [react()],
   devToolbar: { enabled: false },
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
 
 export default defineConfig(config);

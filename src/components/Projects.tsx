@@ -3,10 +3,11 @@ import { Fragment } from "react/jsx-runtime";
 import type { ImageMetadata } from "astro";
 
 import { cn } from "@/utils";
-import { Image } from "./Image";
-import { Section } from "./Section";
-import { SectionHeader } from "./SectionHeader";
-import { Separator } from "./Separator";
+import { Image } from "./ui/Image";
+import { SectionCard } from "./ui/SectionCard";
+import { Section } from "./ui/Section";
+import { SectionHeader } from "./ui/SectionHeader";
+import { Separator } from "./ui/Separator";
 
 import gildenDark from "public/images/projects/gilden/dark.png";
 import gildenLight from "public/images/projects/gilden/light.png";
@@ -14,7 +15,7 @@ import giftedDark from "public/images/projects/gifted/dark.png";
 import giftedLight from "public/images/projects/gifted/light.png";
 import liDark from "public/images/projects/lukeivie-com/dark.png";
 import liLight from "public/images/projects/lukeivie-com/light.png";
-import { Badge } from "./Badge";
+import { Badge } from "./ui/Badge";
 
 interface Project {
   id: number;
@@ -63,22 +64,15 @@ const projects: Project[] = [
 export const Projects = () => (
   <Section>
     <SectionHeader>Projects</SectionHeader>
-    <ul className="flex flex-col gap-1">
+    <ul aria-label="Projects" className="flex flex-col gap-1">
       {projects.map(
         ({ id, name, href, image: { dark, light }, description }, i) => (
           <Fragment key={id}>
             <li>
-              <a
+              <SectionCard
                 href={href}
-                target="_blank"
-                className={cn(
-                  "group",
-                  "flex flex-row items-center justify-between",
-                  "text-base",
-                  "rounded-lg p-4",
-                  "hover:bg-zinc-100",
-                  "dark:hover:bg-zinc-900 dark:active:bg-zinc-800"
-                )}
+                aria-label={`${name} (opens in new tab)`}
+                className="flex flex-row items-center justify-between"
               >
                 <div className="flex gap-4">
                   <Image alt={name} dark={dark} light={light} />
@@ -87,7 +81,8 @@ export const Projects = () => (
                       <h3
                         className={cn(
                           "text-base font-medium",
-                          "dark:group-hover:text-zinc-300 dark:group-active:text-zinc-200"
+                          "group-hover:text-zinc-700 group-focus-visible:text-zinc-700 group-active:text-zinc-800",
+                          "dark:group-hover:text-zinc-300 dark:group-focus-visible:text-zinc-300 dark:group-active:text-zinc-200",
                         )}
                       >
                         {name}
@@ -97,7 +92,8 @@ export const Projects = () => (
                     <p
                       className={cn(
                         "text-base text-zinc-500",
-                        "dark:group-hover:text-zinc-400 dark:group-active:text-zinc-300"
+                        "group-hover:text-zinc-600 group-focus-visible:text-zinc-600 group-active:text-zinc-700",
+                        "dark:group-hover:text-zinc-400 dark:group-focus-visible:text-zinc-400 dark:group-active:text-zinc-300",
                       )}
                     >
                       {description}
@@ -106,17 +102,18 @@ export const Projects = () => (
                 </div>
                 <div
                   className={cn(
-                    "text-zinc-600 self-center",
-                    "dark:group-hover:text-zinc-500 dark:group-active:text-zinc-400"
+                    "text-zinc-500 dark:text-zinc-600 self-center",
+                    "group-hover:text-zinc-600 group-focus-visible:text-zinc-600 group-active:text-zinc-700",
+                    "dark:group-hover:text-zinc-500 dark:group-focus-visible:text-zinc-500 dark:group-active:text-zinc-400",
                   )}
                 >
-                  <ExternalLink />
+                  <ExternalLink aria-hidden="true" />
                 </div>
-              </a>
+              </SectionCard>
             </li>
             {!!projects[i + 1] && <Separator className="mx-4" />}
           </Fragment>
-        )
+        ),
       )}
     </ul>
   </Section>

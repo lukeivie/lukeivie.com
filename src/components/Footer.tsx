@@ -1,4 +1,4 @@
-import { Separator } from "./Separator";
+import { Separator } from "./ui/Separator";
 
 export const Footer = () => (
   <footer className="text-sm text-zinc-400 dark:text-zinc-600 p-3">

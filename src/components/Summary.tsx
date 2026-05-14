@@ -1,10 +1,10 @@
-import { Link } from "./Link";
+import { Link } from "./ui/Link";
 import { Logo } from "./Logo";
 import { SocialLinks } from "./SocialLinks";
 
 export const Summary = () => (
   <div className="flex flex-col gap-6 sm:gap-8">
-    <a href="/" className="inline-flex self-start px-4 group">
+    <a href="/" aria-label="Home" className="inline-flex self-start px-4 group">
       <Logo className="w-10 sm:w-12 group-hover:scale-125 group-active:scale-100 transition-all" />
     </a>
     <h1 className="text-xl sm:text-2xl dark:text-zinc-300 px-4">
@@ -22,10 +22,21 @@ export const Summary = () => (
       </p>
       <p className="hidden sm:block">
         Currently Senior Software Engineer at{" "}
-        <Link href="https://namely.com">Namely</Link>. Previously Full-Stack
-        Engineer at <Link href="https://discountmags.com">DiscountMags</Link>.
-        Before that - UI Engineer at{" "}
-        <Link href="https://oforce.com">Openforce</Link>.
+        <Link href="https://namely.com" aria-label="Visit namely.com (opens in new tab)">
+          Namely
+        </Link>
+        . Previously Full-Stack Engineer at{" "}
+        <Link
+          href="https://discountmags.com"
+          aria-label="Visit DiscountMags.com (opens in new tab)"
+        >
+          DiscountMags
+        </Link>
+        . Before that - UI Engineer at{" "}
+        <Link href="https://oforce.com" aria-label="Visit openforce.com (opens in new tab)">
+          Openforce
+        </Link>
+        .
       </p>
       <p>
         Self-improvement is my primary focus in life. I strive to always be

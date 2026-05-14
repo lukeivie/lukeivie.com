@@ -1,9 +1,9 @@
-import { Image } from "./Image";
-import { Section } from "./Section";
-import { SectionHeader } from "./SectionHeader";
+import { Image } from "./ui/Image";
+import { Section } from "./ui/Section";
+import { SectionHeader } from "./ui/SectionHeader";
 import me from "public/images/me.jpg";
 
-import { Timeline } from "./Timeline";
+import { Timeline } from "./ui/Timeline";
 
 export const Freelance = () => (
   <Section>
@@ -13,7 +13,7 @@ export const Freelance = () => (
         light={me}
         dark={me}
         alt="Luke Ivie"
-        className="w-20 h-20 !rounded-full"
+        className="w-20 h-20 rounded-full!"
       />
       <div className="flex flex-col text-base text-zinc-500 gap-4">
         <p>

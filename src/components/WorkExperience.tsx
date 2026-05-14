@@ -1,12 +1,13 @@
 import { cn } from "@/utils";
-import { Section } from "./Section";
-import { SectionHeader } from "./SectionHeader";
+import { Section } from "./ui/Section";
+import { SectionHeader } from "./ui/SectionHeader";
 import { ExternalLink } from "lucide-react";
-import { Badge } from "./Badge";
-import { Image } from "./Image";
-import { Separator } from "./Separator";
+import { Badge } from "./ui/Badge";
+import { Image } from "./ui/Image";
+import { SectionCard } from "./ui/SectionCard";
+import { Separator } from "./ui/Separator";
 import { Fragment } from "react/jsx-runtime";
-import { Timeline } from "./Timeline";
+import { Timeline } from "./ui/Timeline";
 
 import namelyLight from "public/images/experience/namely/light.png";
 import namelyDark from "public/images/experience/namely/dark.png";
@@ -68,11 +69,11 @@ const jobs: Job[] = [
   },
 ];
 
-export const Work = () => {
+export const WorkExperience = () => {
   return (
     <Section>
       <SectionHeader>Work Experience</SectionHeader>
-      <ul className="flex flex-col gap-1">
+      <ul aria-label="Work experience" className="flex flex-col gap-1">
         {jobs.map(
           (
             {
@@ -85,21 +86,14 @@ export const Work = () => {
               end,
               isCurrent,
             },
-            i
+            i,
           ) => (
             <Fragment key={id}>
               <li>
-                <a
+                <SectionCard
                   href={href}
-                  target="_blank"
-                  className={cn(
-                    "group",
-                    "flex sm:items-center gap-4",
-                    "text-base",
-                    "rounded-lg p-4",
-                    "hover:bg-zinc-100",
-                    "dark:hover:bg-zinc-900 dark:active:bg-zinc-800"
-                  )}
+                  aria-label={`${company} — ${jobTitle} (opens in new tab)`}
+                  className="flex sm:items-center gap-4"
                 >
                   <Image alt={company} dark={dark} light={light} />
                   <div className="flex w-full flex-col sm:flex-row justify-between items-start sm:items-center">
@@ -109,7 +103,8 @@ export const Work = () => {
                           <h3
                             className={cn(
                               "text-base font-medium",
-                              "dark:group-hover:text-zinc-300 dark:group-active:text-zinc-200"
+                              "group-hover:text-zinc-700 group-focus-visible:text-zinc-700 group-active:text-zinc-800",
+                              "dark:group-hover:text-zinc-300 dark:group-focus-visible:text-zinc-300 dark:group-active:text-zinc-200",
                             )}
                           >
                             {company}
@@ -118,13 +113,20 @@ export const Work = () => {
                         </div>
                         <ExternalLink
                           size={18}
-                          className="opacity-0 group-hover:opacity-100 transition-all duration-200 text-zinc-400"
+                          aria-hidden="true"
+                          className={cn(
+                            "opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-all duration-200",
+                            "text-zinc-400 dark:text-zinc-400",
+                            "group-hover:text-zinc-500 group-focus-visible:text-zinc-500 group-active:text-zinc-600",
+                            "dark:group-hover:text-zinc-300 dark:group-focus-visible:text-zinc-300 dark:group-active:text-zinc-200",
+                          )}
                         />
                       </div>
                       <p
                         className={cn(
                           "text-base text-zinc-500",
-                          "dark:group-hover:text-zinc-400 dark:group-active:text-zinc-300"
+                          "group-hover:text-zinc-600 group-focus-visible:text-zinc-600 group-active:text-zinc-700",
+                          "dark:group-hover:text-zinc-400 dark:group-focus-visible:text-zinc-400 dark:group-active:text-zinc-300",
                         )}
                       >
                         {jobTitle}
@@ -132,11 +134,11 @@ export const Work = () => {
                     </div>
                     <Timeline start={start} end={end} />
                   </div>
-                </a>
+                </SectionCard>
               </li>
               {!!jobs[i + 1] && <Separator className="mx-4" />}
             </Fragment>
-          )
+          ),
         )}
       </ul>
     </Section>
